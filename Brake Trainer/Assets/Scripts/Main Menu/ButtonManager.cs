@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-   public void ControlsButtonPressed(){
+    public void ControlsButtonPressed()
+    {
         SceneManager.LoadScene("Controls");
-   }
+    }
+
+    public void TrainerButtonPressed()
+    {
+        SceneManager.LoadScene("Trainer");
+    }
 }
