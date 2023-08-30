@@ -33,7 +33,7 @@ public class Done : MonoBehaviour
     [SerializeField] Toggle gearUpInvert;
     [SerializeField] Toggle gearDownInvert;
 
-    [SerializeField] string controlsFilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+    string controlsFilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + Path.DirectorySeparatorChar + "Driver Training Tool" + Path.DirectorySeparatorChar + "Controls.txt";
 
     // Start is called before the first frame update
     public void OnDoneButtonPressed(){
@@ -45,7 +45,7 @@ public class Done : MonoBehaviour
         toWrite += "Gear Up:"+gearUpAxis.options[gearUpAxis.value].text+","+gearUpMax.text+","+gearUpMin.text+","+gearUpInvert.isOn+"\n";
         toWrite += "Gear Down:"+gearDownAxis.options[gearDownAxis.value].text+","+gearDownMax.text+","+gearDownMin.text+","+gearDownInvert.isOn+"\n";
 
-        WriteToFile(controlsFilePath+"\\Controls.txt",toWrite);
+        WriteToFile(controlsFilePath,toWrite);
     }
 
     void WriteToFile(string path, string datastring){
