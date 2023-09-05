@@ -1,5 +1,0 @@
-Brake:Button:/Mouse/rightButton,0,0,False
-Throttle:Vector2:/Mouse/delta,0,0,False
-Steer:Button:/Mouse/press,1,0,False
-Gear Up:Button:/Mouse/middleButton,0,0,False
-Gear Down:Button:/Mouse/rightButton,0,0,False
